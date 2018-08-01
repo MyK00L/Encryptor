@@ -1,5 +1,5 @@
 # ENCRYPTOR
-### © 2018 Michael Chelli.  All rights reserved.
+### © 2018 Michael Chelli.
 This is a simple app made with cordova to encrypt strings.
 
 The encryption is performed with the AES algorithm.
