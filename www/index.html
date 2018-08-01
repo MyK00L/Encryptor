@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+            Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+            For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>encryptor</title>
+</head>
+<body>
+
+    <div id="decrypt" class="page">
+        <div class="topbar">
+            <h1 class="title">DECRYPT</h1>
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="password" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" id="decrypt-button" type="button">decrypt</button>
+            </span>
+        </div>
+    </div>
+
+    <div id="add-entry" class="page">
+        <div class="topbar">
+            <img src="images/menu.png" height="42" width="42" class="menu-icon" />
+            <h1 class="title">ADD ENTRY</h1>
+        </div>
+        <div class="input-group">
+            <input type="text" id="new-entry-name" class="form-control" placeholder="entry name" />
+            <input type="password" id="new-entry-value" class="form-control" placeholder="entry value" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" id="add-entry-button" type="button">add/change</button>
+            </span>
+        </div>
+        <p class="notice">If you choose the same name as an already existing entry, that entry will be overwritten.</p>
+    </div>
+
+    <div id="entries" class="page">
+        <div class="topbar">
+            <img src="images/menu.png" height="42" width="42" class="menu-icon" />
+            <h1 class="title">ENTRIES</h1>
+        </div>
+        <table id="entries-table"></table>
+        <img id="add-button" src="images/new.png" />
+    </div>
+
+    <div id="change-password" class="page">
+        <div class="topbar">
+            <img src="images/menu.png" height="42" width="42" class="menu-icon" />
+            <h1 class="title">CHANGE PWD</h1>
+        </div>
+        <div class="input-group">
+            <input type="password" id="new-password" placeholder="new password" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" id="change-password-button" type="button">change</button>
+            </span>
+        </div>
+    </div>
+
+    <div id="options" class="page">
+        <div class="topbar">
+            <img src="images/menu.png" height="42" width="42" class="menu-icon" />
+            <h1 class="title">OPTIONS</h1>
+        </div>
+        <ul id="options-ul">
+            <li><input type="checkbox" id="exit-on-pause-checkbox" class="form-control" />exit on pause event</li>
+        </ul>
+    </div>
+
+    <div id="about" class="page">
+        <div class="topbar">
+            <img src="images/menu.png" height="42" width="42" class="menu-icon" />
+            <h1 class="title">ABOUT</h1>
+        </div>
+        <p style="text-align:center;">This app was made by MyK_00L</p>
+        <p>This app was made with the use of:</p>
+        <ul>
+            <li><a href="https://cordova.apache.org">cordova</a></li>
+            <li><a href="http://point-at-infinity.org/jsaes">jsaes</a></li>
+            <li><a href="http://point-at-infinity.org/jssha256">jssha256</a></li>
+            <li><a href="https://github.com/dchest/scrypt-async-js">scrypt-async-js</a></li>
+        </ul>
+    </div>
+
+    <div id="menu" class="page">
+        <div class="topbar">
+            <img src="images/menu-back.png" height="42" width="42" class="menu-back-icon" />
+            <h1 class="title">MENU</h1>
+        </div>
+        <ul>
+            <li class="menu-entry">decrypt</li>
+            <li class="menu-entry">add-entry</li>
+            <li class="menu-entry">entries</li>
+            <li class="menu-entry">change-password</li>
+            <li class="menu-entry">options</li>
+            <li class="menu-entry">about</li>
+            <li id="exit">exit</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/aes.js"></script>
+    <script type="text/javascript" src="scripts/sha256.js"></script>
+    <script type="text/javascript" src="scripts/scrypt.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>

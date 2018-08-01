@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.M.encryptor" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="">
+  <name>encryptor</name>
+  <description>An application that lets you encrypt strings.</description>
+  <author href="https://github.com/MyK00L">MyK_00L</author>
+  <vs:template-name>BlankJS</vs:template-name>
+  <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
+  <engine name="android" spec="5.2.1" />
+  <engine name="ios" spec="4.2.0" />
+  <engine name="windows" spec="4.4.2" />
+  <content src="index.html" />
+  <preference name="windows-target-version" value="10.0" />
+  <!-- Support for Cordova 5.0.0 plugin system -->
+  <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+  </platform>
+  <icon src="res/icon.png" />
+  <preference name="Fullscreen" value="False" />
+  <preference name="KeepRunning" value="False" />
+  <preference name="InAppBrowserStorageEnabled" value="True" />
+</widget>
