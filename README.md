@@ -6,7 +6,7 @@ The encryption is performed with the AES algorithm.
 The key for AES is generated with the scrypt algorithm.
 
 ## TABLE OF CONTENTS
-* [description](#ENCRYPTOR)
+* [description](#encryptor)
 * [table of contents](#table-of-contents)
 * [external libraries used](#external-libraries-used)
 
